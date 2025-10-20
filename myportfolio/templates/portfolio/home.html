@@ -1,0 +1,282 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio</title>
+<!-- optional, remove if you don't have kit -->
+  <!-- Google font + Font Awesome for icons (you can replace icons with local svgs if you prefer) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- optional, remove if you don't have kit -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+</head>
+<body>
+ <header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <span class="logo-main">Ranga</span><span class="logo-accent">.dev</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <!-- Left column -->
+        <div class="hero-left">
+          <h4 class="hero-title">
+            Hi! I'm <strong>Ranganathan</strong>,<br>
+            A Web <span class="highlight-line">Designer & Developer</span>
+          </h4>
+
+          <p class="hero-sub">
+            Combining development skills with creative design — I transform concepts into dynamic, user-centered web solutions.
+          </p>
+
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="{% static 'files/Resume.pdf'%}" download>Download Resume</a>
+            <a class="btn btn-outline" href="#contact">Get in touch</a>
+          </div>
+
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/ranganathan-p-0b2671359?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/RANGA52081" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Right column (figure + badges + rings) -->
+        <div class="hero-right" aria-hidden="false">
+          <div class="figure-wrap">
+            <!-- decorative concentric rings are created in CSS pseudo-elements -->
+            <img src="{% static 'images/Copilot_20251009_214947.png' %}" alt="3D developer figure" class="figure-img">
+
+            <!-- floating tech badges -->
+               <div class="badge badge-1">
+                      <img src="{% static 'images/Copilot_20251009_105245.png' %}" alt="JavaScript">
+                </div>
+              <div class="badge badge-2">
+                      <img src="{% static 'images/stylized-3d-html-logo-design-free-png.png' %}" alt="HTML">
+              </div>
+              <div class="badge badge-3">
+                      <img src="{% static 'images/css.png' %}" alt="CSS">
+              </div>
+              <div class="badge badge-4">
+                      <img src="{% static 'images/mysql.png' %}" alt="MySQL"> 
+              </div>
+
+          </div>
+      </div>
+
+      <!-- scroll indicator -->
+      <div class="scroll-indicator" onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})" title="Scroll down">
+        <div class="dot"></div>
+      </div>
+    </section>
+<section id="education" class="education-section">
+  <h2>Education & <span>Achievements</span></h2>
+
+  <div class="edu-container">
+
+    <div class="edu-card">
+      <h3>Higher Secondary Education</h3>
+      <p><strong>Chennai Higher Secondary School</strong></p>
+      <p class="year">2020 – 2022</p>
+      <p>Completed with a strong focus on c omputer science and mathematics.</p>
+    </div>
+
+    <div class="edu-card">
+      <h3>Bachelor of Computer Applications (BCA)</h3>
+      <p><strong>Mar Gregories College of Arts and Sciences</strong></p>
+      <p class="year">2022 – 2025</p>
+      <p>Focused on programming, web development, and software engineering.</p>
+    </div>
+
+    <div class="edu-card achievement">
+  <h3>Achievements</h3>
+  <ul>
+    <li>🏅 <strong>1st Prize in Web Development Competition</strong> — Recreated a complete webpage design (with boxes, icons, and layout) under offline conditions using only local resources. The challenge tested creativity and coding skill without internet access.</li>
+    <li>💻 Built a full restaurant website “Prime Essence” using PHP & MySQL</li>
+    <li>🚀 Team member of “Cryptoverse” (NaanMudalvan) — cryptocurrency dashboard project using html,css,js</li>
+    <li>🎨 Designed creative UI mockups and wireframes using Figma</li>
+    <li>🐍 Completed a Python Developer course under AISECT (TNSDC)</li>
+  </ul>
+</div>
+
+
+  </div>
+</section>
+
+    <!-- Minimal sections so links work -->
+    <section id="projects" class="projects">
+  <h2 class="section-title">My Projects</h2>
+  <div class="projects-container">
+
+    <div class="project-card">
+      <img src="{% static 'images/prime-essence.jpeg' %}" alt="Prime Essence Restaurant Website">
+      <h3>Prime Essence</h3>
+      <p>A restaurant website built using HTML, CSS, JS, PHP & MySQL with a customizable food section and cart integration.</p>
+      <a href="https://github.com/RANGA52081/prime-essence" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="{% static 'images/Crypto.jpeg' %}" alt="Cryptoverse Dashboard">
+      <h3>Cryptoverse</h3>
+      <p>A cryptocurrency dashboard showing live market data, built with html,css,js and styled for interactive user experience.</p>
+      <a href="https://github.com/RANGA52081/Cryptoverse" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="{% static 'images/RSVP.png'%}" alt="Art Showcase RSVP System">
+      <h3>Art Showcase RSVP</h3>
+      <p>A Python-based RSVP system to manage guests, filter by art style, and send personalized invitations.</p>
+      <a href="https://github.com/RANGA52081/Guests_ART_showcase_RSVP" class="btn">View Project</a>
+    </div>
+
+  </div>
+</section>
+
+
+    <section id="about" class="about">
+  <div class="about-container">
+    <div class="about-text">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        Hi! I'm <span class="highlight">Ranganathan</span>, a passionate web developer and designer.  
+        I combine <strong>creative design</strong> with <strong>clean coding</strong> to build user-friendly and visually appealing web solutions.
+      </p>
+      <p>
+        I have experience in <strong>HTML, CSS, JavaScript, MySQL, Python, Figma, and Django</strong>.  
+        I enjoy transforming ideas into real-world applications — whether it’s a portfolio, restaurant site, or an interactive dashboard.
+      </p>
+      <p>
+        In my free time, I love drawing — it helps me stay creative, positive, and focused.  
+        I'm always eager to learn new technologies and improve my front-end development skills.
+      </p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+
+    <div class="about-image">
+      <img src="{% static 'images/About.png' %}" alt="About Me">
+    </div>
+  </div>
+</section>
+
+    <section id="skills" class="skills-section">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card">HTML</div>
+    <div class="skill-card">CSS</div>
+    <div class="skill-card">JavaScript</div>
+    <div class="skill-card">MySQL</div>
+    <div class="skill-card">Python</div>
+    <div class="skill-card">Figma</div>
+    <div class="skill-card">Django</div>
+    <div class="skill-card">GitHub</div>
+  </div>
+</section>
+
+    <section id="contact" class="contact-section">
+  <h2>Contact <span>Me</span></h2>
+  <p>Feel free to reach out for collaborations or just a friendly chat 👋</p>
+
+  <form id="contactForm">
+    <div class="form-group">
+      <input type="text" id="name" placeholder="Your Name" required />
+    </div>
+
+    <div class="form-group">
+      <input type="email" id="email" placeholder="Your Email" required />
+    </div>
+
+    <div class="form-group">
+      <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+
+  <div class="contact-info">
+    <p><strong>Email:</strong> pranganathan403@gmail.com</p>
+    <p><strong>Location:</strong> Chennai, India</p>
+  </div>
+</section>
+<!-- Certificate Showcase -->
+<section class="container my-5">
+  <h2 class="text-center text-light mb-4">Certificates</h2>
+  <div id="certCarousel" class="carousel slide-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row justify-content-center">
+          <div class="col-10 col-sm-4 col-md-4 mb-4 cert-zoom">
+            <img src="{% static 'images/bitsync2.jpeg' %}" class="img-fluid rounded shadow" onclick="openModal(this.src)">
+          </div>
+          <div class="col-10 col-sm-4 col-md-4 mb-4 cert-zoom">
+            <img src="{% static 'images/techtronics.jpeg' %}" class="img-fluid rounded shadow" onclick="openModal(this.src)">
+          </div>
+          <div class="col-10 col-sm-4 col-md-4 mb-4 cert-zoom">
+            <img src="{% static 'images/samar1.jpeg' %}" class="img-fluid rounded shadow" onclick="openModal(this.src)">
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-10 col-sm-4 col-md-4 mb-4">
+            <img src="{% static 'images/bitsync1.jpeg' %}" class="img-fluid rounded shadow" onclick="openModal(this.src)">
+          </div>
+          <div class="col-10 col-sm-4 col-md-4 mb-4">
+            <img src="{% static 'images/samar2.jpeg' %}" class="img-fluid rounded shadow" onclick="openModal(this.src)">
+          </div>
+          <div class="col-10 col-sm-4 col-md-4 mb-4">
+            <img src="{% static 'images/bitsync2.jpeg' %}" class="img-fluid rounded shadow" onclick="openModal(this.src)">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Modal Viewer -->
+<div id="certModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+
+<!-- Certification Modal -->
+  <footer class="site-footer">
+    <div class="container">© 2025 Ranga.dev — created</div>
+  </footer>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
